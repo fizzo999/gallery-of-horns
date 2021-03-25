@@ -1,3 +1,31 @@
+#root {
+  /* width: 1200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 300px;
+}
+
+.card-deck {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-deck > div {
+  margin-top: 24px;
+}
+
 .App {
   text-align: center;
 }
