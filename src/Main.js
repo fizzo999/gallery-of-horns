@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import HornedBeasts from './HornedBeasts.js';
-import data from './data.json';
-import { CardDeck } from 'react-bootstrap';
+import CardColumns from 'react-bootstrap/CardColumns';
 
 class Main extends Component {
   render() {
     return (
       <React.Fragment>
-        <CardDeck>
-        {data.map((eachObject, index) => {
+        <CardColumns>
+        {this.props.hornObjectsArray.map((eachObject, index) => {
           return (
             <div key={index} className={eachObject.keyword}>
               <HornedBeasts          
@@ -20,7 +19,7 @@ class Main extends Component {
             </div>
           )
         })}
-        </CardDeck>
+        </CardColumns>
       </React.Fragment>
     )
   }
