@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 
 export class HornedBeasts extends Component {
   constructor(props){
@@ -20,7 +20,7 @@ export class HornedBeasts extends Component {
     //   this.props.displayAsModal(this.props.index);
     // };
     return (
-      <Card style={{ width: '25rem' }} bg='primary' text='dark' border='light'>
+      <Card style={{ width: '25rem' }} bg='light' text='dark' border='primary'>
         <Card.Img onClick={likeImage} variant="top" src={this.props.image_url} alt={this.props.title} title={this.props.title}/>
         <Card.Body onClick={likeImage}>
           <Card.Title><h2>{this.props.title}</h2></Card.Title>
