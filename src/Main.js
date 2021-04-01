@@ -1,12 +1,34 @@
 import React, { Component } from 'react';
 import HornedBeasts from './HornedBeasts.js';
-import CardColumns from 'react-bootstrap/CardColumns';
+import CardDeck from 'react-bootstrap/CardDeck';
+import Form from 'react-bootstrap/Form';
 
 class Main extends Component {
+
+  handleSelection = (event) => {
+    if(event.target.value === 'All') {
+      this.props.handleDropDown(event.target.value);
+    } else {
+      this.props.handleDropDown(+event.target.value);
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
-        <CardColumns>
+        <Form>
+          <Form.Group controlId='hornsSelected'>
+            <Form.Label>How many horns</Form.Label>
+            <Form.Control onChange={this.handleSelection} as='select'>
+              <option>All</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>100</option>
+            </Form.Control>
+          </Form.Group>
+        </Form>
+        <CardDeck>
         {this.props.hornObjectsArray.map((eachObject, index) => {
           return (
             <div key={index} className={eachObject.keyword}>
@@ -15,11 +37,12 @@ class Main extends Component {
                 description={eachObject.description}
                 keyword={eachObject.keyword}
                 title={eachObject.title}
-                horns={eachObject.horns}/>
+                horns={eachObject.horns}
+                showModal={this.props.showModal}/>
             </div>
           )
         })}
-        </CardColumns>
+        </CardDeck>
       </React.Fragment>
     )
   }

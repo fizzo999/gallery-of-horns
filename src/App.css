@@ -4,9 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.App {
+main .card-deck {
+  /* display: block; */
+  width: 70%;
+  margin: 0 auto;
+}
+/* .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +26,36 @@ footer {
 img {
   margin-top: 36px;
   max-width: 300px;
+  text-align: center;
 }
+
+div.modal-content {
+  /* width: 900px; */
+}
+
+img.card-img {
+  text-align: center;
+  display: block;
+  margin: 42px auto;
+}
+
+.card-title.h5 {
+  text-align: center;
+  color: blue;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p.card-text {
+  text-align: center;
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
 /* .card-deck {
   display: grid;
@@ -30,6 +64,10 @@ img {
 
 .card-deck > div {
   margin-top: 24px;
+}
+
+.card-deck > div > div > img {
+  align-self: center;
 }
 
 .App {
@@ -41,35 +79,16 @@ img {
   pointer-events: none;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .card-columns {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-}
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.form-group {
+  width: 300px;
+  margin: 0 auto;
 }
